@@ -1,0 +1,163 @@
+.container {
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 2em;
+
+    @media screen and (max-width: 1280px) {
+        padding-top: 20px;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+
+    .run-editor-btn {
+        padding-inline: 2rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        height: 40px;
+        text-transform: uppercase;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 2px solid #92dce5;
+        color: #92dce5;
+        transition: 400ms ease-in-out;
+
+        &:hover {
+            background-color: #92dce5;
+            color: $clrNavy;
+        }
+    }
+}
+
+.title {
+    text-align: center;
+    color: $clrWhite;
+    margin: 100px auto;
+    letter-spacing: -0.05em;
+    line-height: 80px;
+    font-size: 5rem;
+
+    @media screen and (max-width: 1280px) {
+        font-size: 3rem;
+        margin: 20px auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+        line-height: 40px;
+        margin: 50px auto;
+    }
+}
+
+.editors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    // background: #32292f;
+    height: 350px;
+    width: 100%;
+
+    @media screen and (max-width: 1280px) {
+        height: 300px;
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .editor {
+        height: 100%;
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2a2933;
+            height: 30px;
+            padding: 0 10px;
+
+            p {
+                color: $clrWhite;
+                font-weight: 600;
+            }
+        }
+        &__output {
+            height: 100%;
+            border-radius: 0 0 6px 6px;
+            font-family: "Source Code Pro", monospace;
+            font-size: 0.9rem;
+            font-weight: 400;
+            tab-size: 4;
+            color: $clrWhite;
+            overflow: hidden;
+            padding: 20px;
+        }
+    }
+
+    .console {
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2a2933;
+            height: 30px;
+            padding: 0 10px;
+
+            p {
+                color: $clrWhite;
+                font-weight: 600;
+            }
+        }
+        &__output {
+            background-color: #000;
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+
+            .log {
+                font-size: 0.8rem;
+                word-wrap: wrap;
+            }
+
+            .log--default {
+                color: #000;
+            }
+
+            .log--string {
+                color: #c2f970;
+            }
+
+            .log--number {
+                color: #7d83ff;
+            }
+
+            .log--boolean {
+                color: #a0d2db;
+            }
+
+            .log--undefined {
+                color: grey;
+            }
+
+            .log--error {
+                color: #ef2d56;
+            }
+
+            .log--object {
+                color: #1affd5;
+            }
+
+            .log--array {
+                color: #f19a3e;
+            }
+
+            .log--function {
+                color: #f4b860;
+            }
+        }
+    }
+}

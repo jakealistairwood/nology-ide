@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nology IDE</title>
+        <link rel="stylesheet" href="/assets/styles/main.css" />
+    </head>
+    <body>
+        <nav class="navbar container">
+            <a href="">
+                <img src="/assets/images/Navbar-Logo-White.svg" alt="nology" />
+            </a>
+            <button class="run-editor-btn">Run</button>
+        </nav>
+        <h1 class="title container">Welcome to _nology</h1>
+        <main class="editors container">
+            <div class="editor">
+                <div class="editor__header">
+                    <p>JS</p>
+                </div>
+                <div class="editor__output" id="jsEditor"></div>
+            </div>
+            <div class="console">
+                <div class="console__header">
+                    <p>Console</p>
+                </div>
+                <div class="console__output"></div>
+            </div>
+        </main>
+        <!-- Required ACE Editor Scripts -->
+        <script src="assets/scripts/src-min/ace.js"></script>
+        <script src="assets/scripts/src-min/mode-javascript.js"></script>
+        <script src="assets/scripts/src-min/ext-language_tools.js"></script>
+        <script src="assets/scripts/src-min/ext-emmet.js"></script>
+        <!-- Custom Scripts -->
+        <script src="assets/scripts/script.js"></script>
+        <script src="assets/scripts/console.js"></script>
+    </body>
+</html>

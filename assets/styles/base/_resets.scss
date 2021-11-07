@@ -1,0 +1,32 @@
+@import "../abstracts/variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    background-color: $clrNavy;
+    font-family: $primaryFont;
+}
